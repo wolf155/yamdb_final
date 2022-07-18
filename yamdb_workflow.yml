@@ -54,7 +54,6 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          sudo docker pull fenryr84/yamdb_final
           sudo docker-compose stop
           sudo docker-compose rm web
           touch .env

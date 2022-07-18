@@ -19,7 +19,9 @@ from reviews.models import Category, Genre, Review, Title, User
 
 from api_yamdb.settings import ADMIN_EMAIL
 
-from .permissions import CreateIsAdmin, IsAdmin, IsAdminOrReadOnly, IsModerator, IsOwnerOrReadOnly, IsSuperUser, IsUser
+from .permissions import (CreateIsAdmin, IsAdmin, IsAdminOrReadOnly,
+                          IsModerator, IsOwnerOrReadOnly, IsSuperUser,
+                          IsUser)
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -159,8 +161,7 @@ class ReviewViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         title_id = self.kwargs['title_id']
         title = get_object_or_404(Title, pk=title_id)
-        queryset = title.reviews.all()
-        return queryset
+        return title.reviews.all()
 
     def perform_create(self, serializer):
         title_id = self.kwargs['title_id']
@@ -178,8 +179,7 @@ class CommentViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         review_id = self.kwargs['review_id']
         review = get_object_or_404(Review, pk=review_id)
-        queryset = review.comments.all()
-        return queryset
+        return review.comments.all()
 
     def perform_create(self, serializer):
         review_id = self.kwargs['review_id']

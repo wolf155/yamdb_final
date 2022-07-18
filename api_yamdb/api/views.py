@@ -19,7 +19,7 @@ from reviews.models import Category, Genre, Review, Title, User
 
 from api_yamdb.settings import ADMIN_EMAIL
 
-from .permissions import (CreateIsAdmin, IsAdminOrReadOnly, IsAdmin,
+from .permissions import (CreateIsAdmin, IsAdmin, IsAdminOrReadOnly,
                           IsModerator, IsOwnerOrReadOnly,
                           IsSuperUser, IsUser)
 

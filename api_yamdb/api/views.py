@@ -19,9 +19,8 @@ from reviews.models import Category, Genre, Review, Title, User
 
 from api_yamdb.settings import ADMIN_EMAIL
 
-from .permissions import (IsAdminOrReadOnly,
-                          IsModerator, IsOwnerOrReadOnly,
-                          IsSuperUser, IsUser)
+from .permissions import (CreateIsAdmin, IsAdmin, IsAdminOrReadOnly,
+                          IsModerator, IsOwnerOrReadOnly, IsSuperUser, IsUser)
 
 
 class UserViewSet(viewsets.ModelViewSet):

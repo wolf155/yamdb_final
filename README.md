@@ -1,6 +1,8 @@
-![Yamdb_workflow](https://github.com/wolf155/yamdb_final/workflows/yamdb_workflow.yaml/badge.svg)
+![Yamdb_workflow](https://github.com/wolf155/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
 # api_yamdb
+Проект доступен по адресу: 51.250.103.111
+
 ## **Как запустить проект:**
 
 Клонировать репозиторий и перейти в него в командной строке:
